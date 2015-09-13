@@ -24,5 +24,11 @@ test:
   database: db/test.mysql2
 
 production:
-  <<: *default
-  database: db/production.mysql2
+  #<<: *default
+  #database: db/production.mysql2
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: shankar_db_prod
+  username: rockcoder126@gmail.com
+  password: ajithrocks810

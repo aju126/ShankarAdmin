@@ -39,6 +39,7 @@ gem 'paperclip', '~> 4.3'
 gem 'mysql2', '~>0.3.11'
 gem 'rspec-rails'
 gem 'factory_girl_rails', '~> 4.5.0'
+gem 'pg'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

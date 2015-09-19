@@ -4,6 +4,6 @@ class Package < ActiveRecord::Base
   has_many :groups
   has_many :products
   has_many :pricings
-  has_one  :status
+  # has_one  :status
 
 end

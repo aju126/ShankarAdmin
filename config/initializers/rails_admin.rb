@@ -47,15 +47,20 @@ RailsAdmin.config do |config|
     list do
       field :name
     end
+
+    create do
+      field :name
+      field :customers
+    end
   end
 
 
   config.model 'Package' do
     list do
       field :name
-      field :group
-      field :status
-      field :product
+      field :groups
+      #field :status
+      #field :product
     end
   end
 
@@ -77,7 +82,18 @@ RailsAdmin.config do |config|
   end
 
   config.model 'Pricing' do
-
+    list do
+      field :cost_price
+    end
+    create do
+      field :cost_price
+      field :pricing_name, :enum do
+        enum_method do
+          :all_pricing_types
+        end
+      end
+      #field :pricing_name, :belongs_to_association
+    end
   end
 
   ### Popular gems integration
